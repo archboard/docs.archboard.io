@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ i18n.locale }}" dir={{ i18n.dir }}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
   </script>
   {% block head %}{% endblock %}
 </head>
-<body class="bg-white">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   {% include 'header.njk' %}
   {% block body %}
     <div class="container py-8">
