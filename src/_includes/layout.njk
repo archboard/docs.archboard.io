@@ -6,6 +6,19 @@
   <link rel="stylesheet" href="/assets/main.bundle.css">
   <script src="/assets/main.bundle.js" defer></script>
   <title>{{ title }} | Archboard Docs</title>
+  <script>
+    window.changeTheme = function (dark) {
+      if (dark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      localStorage.theme = dark ? 'dark' : 'light'
+    }
+
+    window.changeTheme(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+  </script>
   {% block head %}{% endblock %}
 </head>
 <body class="bg-white">
