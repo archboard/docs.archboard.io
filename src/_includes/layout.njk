@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ i18n.locale }}" dir={{ i18n.dir }}>
+<html lang="{{ locale }}" dir={{ dir }}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <script src="/assets/main.bundle.js" defer></script>
   <title>{{ title }} | Archboard Docs</title>
   <script>
-    window.changeTheme = function (dark) {
+    window.changeTheme = (dark) => {
       if (dark) {
         document.documentElement.classList.add('dark')
       } else {
@@ -18,15 +18,24 @@
     }
 
     window.changeTheme(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+
+    function dropdown() {
+      return {
+        show: false,
+        open() { this.show = true },
+        close() { this.show = false },
+        isOpen() { return this.show === true },
+      }
+    }
   </script>
   {% block head %}{% endblock %}
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   {% include 'header.njk' %}
   {% block body %}
-    <div class="container py-8">
+    <main class="px-4 sm:px-8 py-8">
       {{ content | safe }}
-    </div>
+    </main>
   {% endblock %}
 </body>
 </html>

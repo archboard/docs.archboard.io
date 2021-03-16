@@ -34,6 +34,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require('@tailwindcss/ui'),
+    require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
   ],
   purge: [
