@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/main.bundle.css">
+<script src="/assets/main.bundle.js" defer></script>
+<title>{{ title }} | Archboard Docs</title>
+<script>
+  window.changeTheme = (dark) => {
+    if (dark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+    localStorage.theme = dark ? 'dark' : 'light'
+  }
+
+  window.changeTheme(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+
+  function dropdown() {
+    return {
+      show: false,
+      open() { this.show = true },
+      close() { this.show = false },
+      isOpen() { return this.show === true },
+    }
+  }
+</script>

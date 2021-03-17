@@ -1,0 +1,16 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<nav class="space-y-1" aria-label="Sidebar">
+  {% for item in accountNavigation %}
+    <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+    {% set href = '/' + locale + '/account/' + item.route %}
+    <a
+      href="{{ href }}"
+      class="{{ 'bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100' if page.url == href else 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 hover:text-gray-900 dark:hover:bg-gray-900 dark:hover:text-gray-100' }} flex items-center px-3 py-2 text-sm font-medium rounded-md"
+      aria-current="page"
+    >
+      <span class="truncate">
+        {{ item.name }}
+      </span>
+    </a>
+  {% endfor %}
+</nav>
