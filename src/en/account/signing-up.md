@@ -1,6 +1,7 @@
 ---
 title: Signing up for your Archboard account
 layout: account/layout.njk
+description: Signing up for an Archboard account gives you access to all of Archboard's products.
 ---
 
 # Signing up for an Archboard account
