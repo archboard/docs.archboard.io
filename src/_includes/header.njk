@@ -17,11 +17,14 @@
     </div>
     <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
       <nav class="flex">
-        <div x-data="dropdown()" class="relative">
+        <a href="#" class="text-base font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition">
+          Archboard Account
+        </a>
+        <div x-data="dropdown()" class="relative ml-12">
           <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
           <button
             type="button"
-            class="text-gray-500 px-2 group bg-white dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-900 focus:ring-primary-500 transition"
+            class="text-gray-500 group bg-white dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-900 focus:ring-primary-500 transition"
             x-bind:class="{ 'text-gray-500 dark:text-gray-300': !isOpen(), 'text-gray-900 dark:text-gray-100': isOpen() }"
             x-on:click="open"
             aria-expanded="false"
@@ -61,10 +64,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class="text-base ml-4 font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition">
-          Archboard Account
-        </a>
-        <a href="https://archboard.io/about" class="text-base ml-8 font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition">
+        <a href="https://archboard.io/about" class="ml-8 text-base font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition">
           About
         </a>
       </nav>
