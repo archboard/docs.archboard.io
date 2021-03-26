@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir={{ dir }}>
+<head>
+  {% include "head.njk" %}
+  {% block head %}{% endblock %}
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <div class="min-h-screen flex flex-col">
+    {% include 'header.njk' %}
+
+    <div class="flex-1 flex flex-wrap">
+      <div class="w-64 px-2 pt-10 border-r bg-gray-100 border-gray-200 dark:border-gray-800 dark:bg-gray-800 overflow-y-scroll">
+        {% include "tidal-ptc/nav.njk" %}
+      </div>
+      <main class="prose max-w-3xl dark:prose-dark px-4 pt-8 flex-1 mx-auto">
+        {% block body %}
+          {{ content | safe }}
+        {% endblock %}
+      </main>
+    </div>
+  </div>
+</body>
+</html>
