@@ -17,3 +17,11 @@ After clicking the launcher button, a menu will slide out from the left. Click o
 ![Click on Tidal PTC to log in](/images/tidal-ptc/application-launcher.png)
 
 The process is the same for teachers, admins, and guardians.
+
+## Using a username and password
+
+Depending on your district's setup, you may also be able to use your email and a password you configure for your Tidal PTC account. After you have created a password for your account, you may be able to use this method without having to log in to PowerSchool first.
+
+## PowerSchool Single Sign On (SSO)
+
+If you have a PowerSchool version of 20.11 and above, you can also log in to PowerSchool using the "Sign in with PowerSchool" button on the login page.
