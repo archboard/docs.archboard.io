@@ -7,9 +7,9 @@ module.exports = [
     ],
   },
   {
-    header: 'Admin',
+    header: 'Admins and Teachers',
     items: [
-      { name: 'Introduction', route: '' },
+      { name: 'Settings', route: 'admin/settings/' },
       { name: 'Signing up', route: 'signing-up/' },
       { name: 'Dashboard', route: 'dashboard/' },
       { name: 'Products', route: 'logging-in/' },
