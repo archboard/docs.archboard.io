@@ -26,3 +26,7 @@ The Availability Settings section contains all the settings pertaining to how an
   - If you set an opening date and time in the future and no closing date, once that date and time are passed, reservations will be open indefinitely.
   - If the opening date is left empty and a closing date is set, reservations will be open now until the closing date and time passes.
   - You can configure an opening and closing date and time. So long as the current date and time fall between those configured, reservations will be opened. Once the closing date and time has passed the reservations will be closed.
+
+## Translator Settings
+
+Tidal PTC allows guardians to request a translator for their conferences. It also has options to add caps to how many can be requested.
