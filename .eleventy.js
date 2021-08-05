@@ -1,16 +1,7 @@
-const i18n = require('eleventy-plugin-i18n')
-const translations = require('./src/_data/i18n')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 
 module.exports = (config) => {
-  config.addPlugin(i18n, {
-    translations,
-    fallbackLocales: {
-      '*': 'en',
-    }
-  })
-
   config.addPassthroughCopy({ 'public': './' })
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],

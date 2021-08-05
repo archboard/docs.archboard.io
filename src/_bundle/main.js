@@ -2,8 +2,8 @@
 import './main.pcss'
 
 // JS
-import 'alpinejs'
-import 'turbolinks'
-import Turbolinks from 'turbolinks'
+// import 'alpinejs'
+// import 'turbolinks'
+// import Turbolinks from 'turbolinks'
 
-Turbolinks.start()
+// Turbolinks.start()

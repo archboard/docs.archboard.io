@@ -6,7 +6,8 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   {% include 'header.njk' %}
-  <main class="prose dark:prose-dark">
+
+  <main class="max-w-4xl mx-auto py-12 px-4 sm:px-6">
     {% block body %}
       {{ content | safe }}
     {% endblock %}

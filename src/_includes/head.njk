@@ -1,8 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/assets/main.bundle.css">
-<script src="/assets/main.bundle.js" defer></script>
-<title>{{ title }} | Archboard Docs</title>
+<title>{{ title }} | Archboard</title>
 <meta name="application-name" content="Archboard Documentation" />
 <meta name="generator" content="11ty" />
 <meta name="description" content="{{ description }}" />
@@ -18,13 +17,4 @@
   }
 
   window.changeTheme(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
-
-  function dropdown() {
-    return {
-      show: false,
-      open() { this.show = true },
-      close() { this.show = false },
-      isOpen() { return this.show === true },
-    }
-  }
 </script>
