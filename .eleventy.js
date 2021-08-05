@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+const htmlmin = require('html-minifier')
 
 module.exports = (config) => {
   config.addPassthroughCopy({ 'public': './' })
@@ -28,6 +29,19 @@ module.exports = (config) => {
         permalinkClass: 'text-gray-500',
       })
   )
+
+  config.addTransform('htmlmin', (content, outputPath) => {
+    if (outputPath.endsWith('.html')) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyJS: true,
+      })
+    }
+
+    return content
+  })
 
   return {
     dir: {
